@@ -21,12 +21,7 @@ def preprocessing(df, objective, columns):
 
 
 def genplot(y, x, w):
-    fig, x_min, x_max = plt.figure(), x.min(), x.max()
-    #fig.x('Average Growing Season Temperature')
-    #fig.ylabel('Price')
-    #fig.suptitle('The Wine Equation')
-
-    eps=1.0
+    fig, x_min, x_max, eps = plt.figure(), x.min(), x.max(), 1.0
     plt.plot([x_min-eps, x_max+eps], [w[1] * (x_min-eps) + w[0], w[1] * (x_max+eps)+ w[0]], 'b-', lw=1)
     plt.plot(x, y, 'ro')
     plt.xlim([x_min-eps, x_max+eps])
