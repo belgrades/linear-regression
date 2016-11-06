@@ -47,7 +47,7 @@ def descent(y, x, alpha=1e-3, itr=1e2, eps=1e-6):
     :param eps: Epsilon for the relative error between solutions t+1 and t.
     :return: The vector w that minimizes RSS iff converges.
     """
-    w = np.zeros(x[0].size)
+    w = np.ones(x[0].size)
     while itr > 0:
         w1 = w - alpha * grad(y, x, w)
         if np.linalg.norm(w1 - w, 1)/np.linalg.norm(w, 1) < eps:
