@@ -79,7 +79,7 @@ def main():
                     itr=1e2,
                     eps=1e-3)
     print(w)
-    print(lib.r2(y=y, c=x, x=w))
+    print("R=", lib.r2(y=y, c=x, x=w))
 
 if __name__ == '__main__':
     main()
